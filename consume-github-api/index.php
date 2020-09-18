@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aunio Ribeiro</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200i,300,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+
+    <section id="search">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 github-search text-center" id="github-search">
+                    <span class="font-monaco">Github</span>
+                    <span class="font-raleway font-italic">Search</span>
+                </div>
+                <div class="col-12 d-flex align-items-center justify-content-center" id="search-bar">
+                    <form class="form-inline" id="form-search-user">
+                        <input id="user-search" class="form-control" type="search" placeholder="" aria-label="Search" required>
+                        <button class="btn p-0" type="submit">
+                            <img class="search-icon" src="assets/img/icons/search-icon.svg" alt="Procurar Usuário GitHub">
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="result">
+        <section id="result-found">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <img id="user-avatar" src="" alt="Avatar Usuário GitHub">
+                        <h1 id="user-name">Nome do usuário</h1>
+                        <h2 id="user-login">Login do usuário</h2>
+                        <div class="user-email d-flex align-items-center">
+                            <img class="user-email-icon" src="assets/img/icons/email-icon.svg" alt="Email do usuário">
+                            <span id="user-email">Email do usuário</span>
+                        </div>
+                        <div class="user-bio d-flex align-items-center">
+                            <img class="user-bio-icon" src="assets/img/icons/bio-icon.svg" alt="Bio do usuário">
+                            <span id="user-bio">Bio do usuário</span>
+                        </div>
+                        <div class="user-organization d-flex align-items-center">
+                            <img class="user-organization-icon" src="assets/img/icons/organization-icon.svg" alt="Organização do usuário">
+                            <span id="user-organization-name">Organização do usuário</span>
+                        </div>
+                        <div class="user-location d-flex align-items-center">
+                            <img class="user-location-icon" src="assets/img/icons/location-icon.svg" alt="Localidade do usuário">
+                            <span id="user-location-name">Endereço</span>
+                        </div>
+                        <div class="user-star d-flex align-items-center">
+                            <img class="user-star-icon" src="assets/img/icons/star-icon.svg" alt="Estrelas do usuário">
+                            <span id="user-star-count">Contador de estrelas</span>
+                        </div>
+                        <div class="user-repositories d-flex align-items-center">
+                            <img class="user-repositories-icon" src="assets/img/icons/repositories-icon.svg" alt="Repositórios do usuário">
+                            <span id="user-repositories-count">Número de repositórios</span>
+                        </div>
+                        <div class="user-followers d-flex align-items-center">
+                            <img class="user-followers-icon" src="assets/img/icons/followers-icon.svg" alt="Seguidores do usuário">
+                            <span id="user-followers-count">Número de seguidores</span>
+                        </div>
+                        <div class="user-following d-flex align-items-center">
+                            <img class="user-following-icon" src="assets/img/icons/following-icon.svg" alt="Seguidores do seguidos">
+                            <span id="user-following-count">Número de seguidores</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-8">
+                        <div class="repos" id="repos">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="result-not-found">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="user-not-found">User not found :(</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
