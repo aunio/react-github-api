@@ -1,13 +1,13 @@
 Criações de elementos front-end para passar o tempo :)
 
-### `dark-mode` :trophy:
-_Switch que modifica o tema da página._
-Resultado? [Aqui](https://aunioribeiro.com.br/dark-mode/index.php).
+### `dark-mode`
+<p>_Switch que modifica o tema da página._</p>
+<p>Resultado? [Aqui](https://aunioribeiro.com.br/dark-mode/index.php).</p>
 
 ### `product-card` :trophy: 
-_Exemplo de um cartão de produto para e-commerce._
-Resultado? [Aqui](https://aunioribeiro.com.br/product-card/index.php).
+<p>_Exemplo de um cartão de produto para e-commerce._</p>
+Resultado? [Aqui](https://aunioribeiro.com.br/product-card/index.php).</p>
 
 ### `consume-github-api` :trophy: 
-_Implementação de uma aplicação client-side, que consulta a API do GitHub e mostra os repositórios de um determinado usuário._
-Resultado? [Aqui](https://aunioribeiro.com.br/consume-github-api/index.php).
+<p>_Implementação de uma aplicação client-side, que consulta a API do GitHub e mostra os repositórios de um determinado usuário._</p>
+Resultado? [Aqui](https://aunioribeiro.com.br/consume-github-api/index.php).</p>
