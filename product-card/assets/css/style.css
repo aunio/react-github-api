@@ -317,10 +317,6 @@ body {
   transition: .5s;
 }
 
-.buy-price__buy:hover {
-  transform: scale(1.1);
-}
-
 .buy-price__buy::before {
   content: '';
   position: absolute;
