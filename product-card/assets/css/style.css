@@ -214,6 +214,7 @@ body {
 .description__text {
   color: #555;
   font-size: 17px;
+  text-align: justify;
 }
 
 .info__color-container {
@@ -349,21 +350,30 @@ body {
 }
 
 .buy-price__price {
-  color: #333;
+  position: relative;
   display: flex;
-  align-items: flex-start;
+  height: 48px;
+  color: #333;
 }
 
 .buy-price__price h2 {
+  align-self: center;
   font-size: 2.1rem;
   font-weight: 600;
   line-height: 1;
 }
 
-.buy-price__price i {
+.buy-price__price span {
+  align-items: top;
+  top: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/* .buy-price__price i {
   font-size: 1.4rem;
   margin-right: 1px;
-}
+} */
 
 @media (max-width: 1070px) {
   .shoesBackground__shoes {
