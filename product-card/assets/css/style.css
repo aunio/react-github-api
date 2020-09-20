@@ -304,6 +304,7 @@ body {
 }
 
 .buy-price__buy {
+  position: relative;
   padding: .7rem 1rem;
   background-color: var(--primary);
   text-decoration: none;
@@ -319,8 +320,32 @@ body {
   transform: scale(1.1);
 }
 
+.buy-price__buy::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, .1);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: .5s;
+}
+
+.buy-price__buy:hover::before {
+  transform: scaleX(1);
+}
+
 .buy-price__buy i {
-  margin-right: 2px;
+  position: relative;
+  margin-right: 4px;
+  z-index: 999999;
+}
+
+.buy-price__buy span {
+  position: relative;
+  z-index: 999999;
 }
 
 .buy-price__price {
