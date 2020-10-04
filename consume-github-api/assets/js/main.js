@@ -95,7 +95,7 @@ function getRepoGitHub(user) {
                             '<h3 id="repo-name">'+data[i].name+'</h3>'+
                             '<p id="repo-description">'+dataDescripton+'</p>'+
                             '<div class="user-star d-flex align-items-center">'+
-                                '<img class="user-star-icon" src="assets/img/icons/star-icon.svg" alt="Estrelas do repositório">'+
+                                '<img loading="lazy" class="user-star-icon" src="assets/img/icons/star-icon.svg" alt="Estrelas do repositório">'+
                                 '<span id="user-star-count">'+data[i].stargazers_count+'</span>'+
                             '</div>'+
                         '</div>'
