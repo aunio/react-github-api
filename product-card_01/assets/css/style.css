@@ -24,7 +24,7 @@ body {
 .card {
   width: 35rem;
   min-height: 80vh;
-  padding: 0rem 5rem;
+  padding: 1rem 5rem;
   border-radius: 30px;
   transform-style: preserve-3d;
   transition: all 0.5s ease;
@@ -95,7 +95,7 @@ body {
 }
 
 .info__purchase {
-  margin-top: 5rem;
+  margin-top: 4rem;
   transition: all 0.75s ease-out;
 }
 
