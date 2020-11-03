@@ -4,7 +4,7 @@ Criações de elementos front-end para passar o tempo :)
 <p><em>Switch que modifica o tema da página.</p></em>
 <p>Resultado? <a href="https://aunioribeiro.com.br/dark-mode/index.php" target="_blank">[Aqui].</a></p>
 
-### `product-card` :trophy: 
+### `product-card_00` :trophy: 
 <p><em>Exemplo de um cartão de produto para e-commerce.</p></em>
 <p>Resultado? <a href="https://aunioribeiro.com.br/product-card/index.php" target="_blank">[Aqui].</a></p>
 
