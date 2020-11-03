@@ -15,7 +15,7 @@ body {
 
 .container {
   display: flex;
-  width: 100%;
+  width: 50%;
   justify-content: center;
   align-items: center;
 }
@@ -40,6 +40,7 @@ body {
 .sneaker img {
   width: 20rem;
   z-index: 2;
+  transition: all 0.75s ease-out;
 }
 
 .circle {
@@ -58,6 +59,7 @@ body {
 .info__title {
   font-size: 3rem;
   font-weight: 900;
+  transition: all 0.75s ease-out;
 }
 
 .info__subtitle {
@@ -65,11 +67,13 @@ body {
   padding: 2rem 0rem;
   color: #585858;
   font-weight: 500;
+  transition: all 0.75s ease-out;
 }
 
 .info__sizes {
   display: flex;
   justify-content: space-between;
+  transition: all 0.75s ease-out;
 }
 
 .sizes__btn {
@@ -90,6 +94,7 @@ body {
 
 .info__purchase {
   margin-top: 5rem;
+  transition: all 0.75s ease-out;
 }
 
 .purchase__btn {
@@ -101,4 +106,5 @@ body {
   cursor: pointer;
   border-radius: 30px;
   font-weight: 600;
+  transition: all 0.75s ease-out;
 }
