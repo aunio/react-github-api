@@ -10,11 +10,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  perspective: 1000px;
 }
 
 .container {
   display: flex;
-  width: 50%;
+  width: 100%;
   justify-content: center;
   align-items: center;
 }
@@ -24,6 +25,7 @@ body {
   min-height: 80vh;
   padding: 0rem 5rem;
   border-radius: 30px;
+  transform-style: preserve-3d;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2),
               0 0 50px rgba(0, 0, 0, 0.2);
 }
