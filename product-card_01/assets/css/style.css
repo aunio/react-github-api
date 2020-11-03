@@ -110,3 +110,37 @@ body {
   font-weight: 600;
   transition: all 0.75s ease-out;
 }
+
+@media (max-width: 767px) {
+  body {
+    min-height: 90vh;
+    padding: 1rem;
+  }
+
+  .card {
+    width: 20rem;
+    padding: 2rem;
+  }
+
+  .sneaker img {
+    width: 15rem;
+  }
+
+  .info__title {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .info__subtitle {
+    padding: 1rem 0rem;
+  }
+
+  .sizes__btn {
+    padding: 0.5rem 1rem;
+  }
+
+  .info__purchase {
+    margin-top: 3rem;
+  }
+} 
