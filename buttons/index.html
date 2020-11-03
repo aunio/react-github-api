@@ -10,14 +10,22 @@
   <title>Hover List</title>
 </head>
 <body>
-  <div class="content">
-    <div>
-      <button class="btn-1">Button 1</button>
-      <button class="btn-2">Button 2</button>
-      <button class="btn-3">Button 3</button>
-      <button class="btn-4">Button 4</button>
-      <button class="btn-5">Button 5</button>
-    </div>
+  <div id="myDIV" class="header">
+    <h2 style="margin:5px">My To Do List</h2>
+    <input type="text" id="myInput" placeholder="Title...">
+    <span onclick="newElement()" class="addBtn">Add</span>
   </div>
+  
+  <ul id="myUL">
+  </ul>
+
+
+
+  <form id="eventList">
+
+  </form>
+
+  <button onclick="newEvent()">CLICA AQUI</button>
+
 </body>
 </html>

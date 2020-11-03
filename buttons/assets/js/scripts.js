@@ -1,18 +1,64 @@
-const options = {
-  year: "numeric",
-  month: "long",
-  day: "numeric"
-};
+// Create a new list item when clicking on the "Add" button
+function newElement() {
 
-const date = new Date(2020, 08, 05);
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("myInput").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+  }
+  document.getElementById("myInput").value = "";
 
-console.log(date.toLocaleDateString("pt-br", options)); //05 de Setembro de 2020
-console.log(date.toLocaleDateString("pt-br", { ...options, month: 'numeric'})) // 05/09/2020
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
 
-/////
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+}
 
-const { DateTimeFormat } = Intl;
+// Click on a close button to hide the current list item
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
 
-const data = new Date('2020-11-31')
 
-let formattedDate = DateTimeFormat('pt-br').format(date);
+
+function newEvent() {
+  //
+  var eventList = document.getElementById('eventList');
+
+  //
+  var eventTitle = document.createElement('h4');
+  var eventTitle_text = document.createTextNode('Novo Evento');
+
+  //
+  var eventContent = document.createElement('div');
+  eventContent.classList.add('form-row')
+
+  //
+  var eventDateContent = document.createElement('div');
+  eventDateContent.classList.add('form-group')
+  eventDateContent.classList.add('col-5')
+
+  eventTitle.appendChild(eventTitle_text)
+
+  eventList.appendChild(eventTitle)
+  eventList.appendChild(eventContent)
+
+  eventContent.appendChild(eventDateContent)
+}
