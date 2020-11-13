@@ -1,10 +1,10 @@
 const card = document.querySelector('.card');
 const container = document.querySelector('.container');
 
-const sneaker = document.querySelector('.sneaker img');
+const toy = document.querySelector('.toy img');
 const infoTitle = document.querySelector('.info__title');
 const infoSubtitle = document.querySelector('.info__subtitle');
-const infoSizes = document.querySelector('.info__sizes');
+const infoSizes = document.querySelector('.info__quality');
 const purchaseButton = document.querySelector('.purchase__btn');
 
 container.addEventListener('mousemove', (e) => {
@@ -17,7 +17,7 @@ container.addEventListener('mousemove', (e) => {
 container.addEventListener('mouseenter', (e) => {
   card.style.transform = "none";
 
-  sneaker.style.transform = "translateZ(150px) rotateZ(-25deg)"
+  toy.style.transform = "translateZ(150px) rotateZ(-25deg)"
   infoTitle.style.transform = "translateZ(125px)"
   infoSubtitle.style.transform = "translateZ(100px)"
   infoSizes.style.transform = "translateZ(75px)"
@@ -28,7 +28,7 @@ container.addEventListener('mouseleave', (e) => {
   // card.style.transition = "all 0.5s ease";
   card.style.transform = `rotateY(0deg) rotateX(0deg)`;
 
-  sneaker.style.transform = "translateZ(0px) rotateZ(0deg)"
+  toy.style.transform = "translateZ(0px) rotateZ(0deg)"
   infoTitle.style.transform = "translateZ(0px)"
   infoSubtitle.style.transform = "translateZ(0px)"
   infoSizes.style.transform = "translateZ(0px)"
