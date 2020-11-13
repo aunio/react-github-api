@@ -27,7 +27,7 @@ body {
   padding: 1rem 5rem;
   border-radius: 30px;
   transform-style: preserve-3d;
-  transition: all 0.5s ease;
+  transition: all 0.1s ease;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2),
               0 0 50px rgba(0, 0, 0, 0.2);
 }
@@ -42,7 +42,7 @@ body {
 .toy img {
   width: 20rem;
   z-index: 2;
-  transition: all 0.75s ease-out;
+  transition: all 0.4s ease-out;
 }
 
 .circle {
@@ -61,7 +61,7 @@ body {
 .info__title {
   font-size: 3rem;
   font-weight: 900;
-  transition: all 0.75s ease-out;
+  transition: all 0.4s ease-out;
 }
 
 .info__subtitle {
@@ -69,13 +69,13 @@ body {
   padding: 2rem 0rem;
   color: #585858;
   font-weight: 500;
-  transition: all 0.75s ease-out;
+  transition: all 0.4s ease-out;
 }
 
 .info__quality {
   display: flex;
   justify-content: space-between;
-  transition: all 0.75s ease-out;
+  transition: all 0.4s ease-out;
 }
 
 .quality__btn {
@@ -96,7 +96,7 @@ body {
 
 .info__purchase {
   margin-top: 4rem;
-  transition: all 0.75s ease-out;
+  transition: all 0.4s ease-out;
 }
 
 .purchase__btn {
@@ -108,7 +108,7 @@ body {
   cursor: pointer;
   border-radius: 30px;
   font-weight: 600;
-  transition: all 0.75s ease-out;
+  transition: all 0.4s ease-out;
 }
 
 @media (max-width: 767px) {
