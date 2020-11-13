@@ -17,18 +17,18 @@ container.addEventListener('mousemove', (e) => {
 container.addEventListener('mouseenter', (e) => {
   card.style.transform = "none";
 
-  toy.style.transform = "translateZ(150px) rotateZ(-25deg)"
-  infoTitle.style.transform = "translateZ(125px)"
-  infoSubtitle.style.transform = "translateZ(100px)"
-  infoSizes.style.transform = "translateZ(75px)"
-  purchaseButton.style.transform = "translateZ(50px)"
+  toy.style.transform = "translateZ(100px)"
+  infoTitle.style.transform = "translateZ(20px)"
+  infoSubtitle.style.transform = "translateZ(20px)"
+  infoSizes.style.transform = "translateZ(10px)"
+  purchaseButton.style.transform = "translateZ(10px)"
 })
 
 container.addEventListener('mouseleave', (e) => {
   // card.style.transition = "all 0.5s ease";
   card.style.transform = `rotateY(0deg) rotateX(0deg)`;
 
-  toy.style.transform = "translateZ(0px) rotateZ(0deg)"
+  toy.style.transform = "translateZ(0px)"
   infoTitle.style.transform = "translateZ(0px)"
   infoSubtitle.style.transform = "translateZ(0px)"
   infoSizes.style.transform = "translateZ(0px)"
