@@ -4,7 +4,7 @@ Criações de elementos front-end para passar o tempo :)
 <p><em>Implementação de uma aplicação client-side, que consulta a API do GitHub e mostra os repositórios de um determinado usuário.</p></em>
 <p>Resultado? <a href="https://aunioribeiro.com.br/consume-github-api/" target="_blank">[Aqui].</a></p>
 
-### `dark-mode`
+### `dark-mode` :trophy:
 <p><em>Switch que modifica o tema da página.</p></em>
 <p>Resultado? <a href="https://aunioribeiro.com.br/dark-mode/" target="_blank">[Aqui].</a></p>
 
