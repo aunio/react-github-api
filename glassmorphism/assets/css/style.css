@@ -26,6 +26,7 @@ h3 {
 }
 
 .content {
+  padding: 1rem 0rem 1rem 0rem;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -71,6 +72,8 @@ h3 {
   left: 10%;
 }
 
+/* User */
+
 .content__user {
   display: flex;
   flex-direction: column;
@@ -115,13 +118,139 @@ h3 {
   font-weight: 500;
 }
 
-/* Responsive */
+/* Games */
+.content__games {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 1rem;
+}
+
+.last__games {
+  margin-bottom: 2rem;
+}
+
+.last__games h1 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.last__games input {
+  background: linear-gradient(
+    to right bottom, 
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.3)
+  );
+  padding: 0.5rem;
+  width: 100%;
+  border: none;
+  border-radius: 0.6rem;
+}
+
+.game {
+  background: linear-gradient(
+    to left top,
+    rgba(255, 255, 255,  0.2),
+    rgba(255, 255, 255, 0.8)
+  );
+  border-radius: 1rem;
+  margin: 2rem 0rem;
+  padding: 1rem;
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.2);
+}
+
+.game__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.game__progress {
+  width: 100%;
+  height: 20%;
+  border-radius: 1rem;
+  background: #ececec;
+  overflow: hidden;
+}
+
+.game__progress-bar {
+  height: 100%;
+  background: linear-gradient(to right top, #65dfc9 0%, #6cdbeb 100%);
+}
+
+.game__percentage {
+  font-weight: 700;
+  background: linear-gradient(to right top, #65dfc9 0%, #6cdbeb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* Responsivity */
+@media (max-width: 1279px) {
+
+  .user__info {
+    margin-top: 1rem;
+  }
+
+  .last__games h1 {
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  /* Games */
+  .content__games {
+    flex: 2;
+  }
+
+  .content__games {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 5rem;
+  }
+
+  .game {
+    display: flex;
+    background: linear-gradient(
+      to left top,
+      rgba(255, 255, 255,  0.2),
+      rgba(255, 255, 255, 0.8)
+    );
+    border-radius: 1rem;
+    margin: 2rem 0rem;
+    padding: 2rem 1rem;
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.2);
+  }
+
+  .last__games {
+    margin-bottom: 3rem;
+  }
+  
+  .last__games h1 {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+  }
+
+  .game img {
+    margin-right: 1rem;
+  }
+
+  .game .game__info {
+    width: 70%;
+  }
+
+  .game__percentage {
+    margin-left: auto;
+  }
+}
+
 @media (min-width: 1280px){
   .glass {
     display: flex;
     width: 60%;
   }
 
+  /* User */
   .user__invite {
     display: flex;
   }
@@ -135,9 +264,5 @@ h3 {
     flex: 1;
     align-items: center;
     justify-content: center;
-  }
-
-  .content__games {
-    flex: 2;
   }
 }
