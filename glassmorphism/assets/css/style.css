@@ -235,7 +235,7 @@ h3 {
 @media (min-width: 1280px){
   .glass {
     display: flex;
-    width: 60%;
+    width: 90%;
   }
 
   /* User */
