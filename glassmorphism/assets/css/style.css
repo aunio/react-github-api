@@ -35,8 +35,9 @@ h3 {
 }
 
 .glass {
-  min-height: 80vh;
+  position: relative;
   width: 90%;
+  min-height: 80vh;
   background: #fff;
   background: linear-gradient(
     to right bottom, 
@@ -46,6 +47,32 @@ h3 {
   backdrop-filter: blur(1rem);
   border-radius: 2rem;
   z-index: 2;
+}
+
+.glass::before {
+  content: '';
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  border-left: none;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 50%;
+  box-sizing: border-box;
+  border-radius: 0 2rem 2rem 0;
+}
+
+.glass::after {
+  content: '';
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  border-right: none;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 50%;
+  box-sizing: border-box;
+  border-radius: 2rem 0 0 2rem;
 }
 
 .circle1,
