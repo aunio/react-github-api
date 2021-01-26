@@ -51,20 +51,7 @@ h3 {
 
 .glass::before {
   content: '';
-  border: 3px solid rgba(255, 255, 255, 0.4);
-  border-left: none;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  height: 100%;
-  width: 50%;
-  box-sizing: border-box;
-  border-radius: 0 2rem 2rem 0;
-}
-
-.glass::after {
-  content: '';
-  border: 3px solid rgba(255, 255, 255, 0.1);
+  border: 3px solid rgba(255, 255, 255, 0.3);
   border-right: none;
   position: absolute;
   left: 0;
@@ -73,6 +60,19 @@ h3 {
   width: 50%;
   box-sizing: border-box;
   border-radius: 2rem 0 0 2rem;
+}
+
+.glass::after {
+  content: '';
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  border-left: none;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 50%;
+  box-sizing: border-box;
+  border-radius: 0 2rem 2rem 0; 
 }
 
 .circle1,
@@ -91,12 +91,12 @@ h3 {
 
 .circle1 {
   top: 5%;
-  right: 15%;
+  right: 5%;
 }
 
 .circle2 {
   bottom: 5%;
-  left: 10%;
+  left: 5%;
 }
 
 /* User */
@@ -126,10 +126,24 @@ h3 {
   margin: 2rem 0rem;
   padding: 1rem 5rem;
   align-items: center;
+  cursor: pointer;
+}
+
+.link:hover .link__img {
+  transform: rotateY(360deg)
+}
+
+.link:hover .link__title {
+  transform: skewX(-10deg);
+}
+
+.link__img {
+  transition: .4s;
 }
 
 .link__title {
   padding: 0rem 2rem;
+  transition: .4s;
 }
 
 .user__invite {
@@ -262,7 +276,7 @@ h3 {
 @media (min-width: 1280px){
   .glass {
     display: flex;
-    width: 90%;
+    width: 85%;
   }
 
   /* User */
@@ -279,5 +293,15 @@ h3 {
     flex: 1;
     align-items: center;
     justify-content: center;
+  }
+}
+
+@media (min-width: 1366PX){
+  .glass {
+    width: 80%;
+  }
+
+  .user__invite img:hover {
+    width: 900px;
   }
 }
