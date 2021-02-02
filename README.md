@@ -16,6 +16,6 @@ Criações de elementos front-end para passar o tempo :)
 <p><em>Exemplo de um cartão de produto para e-commerce.</em></p>
 <p>Resultado? <a href="https://aunioribeiro.com.br/product-card_01/" target="_blank">[Aqui].</a></p>
 
-### `Glassmorphism` :trophy: 
+### `glassmorphism` :trophy: 
 <p><em>Exemplo de uma tela utilizando glassmorphism</em></p>
 <p>Resultado? <a href="https://aunioribeiro.com.br/glassmorphism/" target="_blank">[Aqui].</a></p>
