@@ -40,7 +40,7 @@ body {
     flex-direction: column;
     backdrop-filter: blur(15px);
     filter: drop-shadow(0 -10px 10px rgba(0, 0, 0, 0.1));
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
     transition: bottom 0.5s;
     z-index: 10;
 }
