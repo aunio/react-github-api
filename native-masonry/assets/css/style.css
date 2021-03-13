@@ -4,11 +4,10 @@ body {
 
 figure {
     margin: 0 0 15px 0;
-    display: flex;
-    justify-content: center;
-    /* display: grid;
+    display: grid;
     grid-template-rows: 1fr auto;
-    break-inside: avoid; */
+    break-inside: avoid;
+    justify-content: center;
 }
 
 img {
