@@ -1,0 +1,27 @@
+body {
+    background-color: #fff;
+}
+
+figure {
+    margin: 0 0 15px 0;
+    display: flex;
+    justify-content: center;
+    /* display: grid;
+    grid-template-rows: 1fr auto;
+    break-inside: avoid; */
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    border-radius: 5px;
+}
+
+figcaption {
+    color: #000;
+    font: 600 16px Poppins, sans-serif;
+}
+
+.container {
+    column-count: 6;
+}
