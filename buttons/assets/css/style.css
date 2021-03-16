@@ -20,9 +20,9 @@ button {
   border: none;
   cursor: pointer;
   background-color: transparent;
+  font-weight: bold;
 }
 
-/* btn-1 */
 .btn-1 {
   position: relative;
   background-color: #1c1b25;
@@ -39,8 +39,7 @@ button {
   transform: translate(-12px, -12px);
 }
 
-.btn-1::before,
-.btn-1::after {
+.btn-1::before, .btn-1::after {
   content: '';
   position: absolute;
   width: 100%;
@@ -62,15 +61,13 @@ button {
   transform: translate(6px, 6px);
 }
 
-/* btn-2 */
 .btn-2 {
   position: relative;
   border: none;
   color: #000;
 }
 
-.btn-2::before,
-.btn-2::after {
+.btn-2::before, .btn-2::after {
   content: '';
   border: 3px solid #000;
   position: absolute;
@@ -91,7 +88,6 @@ button {
   transform: translate(3px, 3px);
 }
 
-/* btn-3 */
 .btn-3 {
   position: relative;
   border: none;
@@ -117,15 +113,13 @@ button {
   width: 100%;
 }
 
-/*btn-4 */
 .btn-4 {
   position: relative;
   overflow: hidden;
   color: #fff;
   border-radius: 30px;
   transition: all .5s ease;
-  box-shadow: 0px -0px 0px 0px rgba(143, 64, 248, .5),
-              0px 0px 0px 0px rgba(30, 200, 255, .5);
+  box-shadow: 0px -0px 0px 0px rgba(143, 64, 248, .5), 0px 0px 0px 0px rgba(30, 200, 255, .5);
 }
 
 .btn-4::after {
@@ -143,8 +137,7 @@ button {
 
 .btn-4:hover {
   transform: translate(0, 6px);
-  box-shadow: 10px -10px 25px 0px rgba(143, 64, 248, .25),
-              -10px 10px 25px 0px rgba(39, 200, 255, .25);
+  box-shadow: 10px -10px 25px 0px rgba(143, 64, 248, .25), -10px 10px 25px 0px rgba(39, 200, 255, .25);
 }
 
 .btn-4:hover::after {
@@ -179,3 +172,26 @@ button {
   opacity: 1;
 }
 
+.btn-6 {
+  position: relative;
+  border: none;
+  color: #000;
+}
+
+.btn-6::after {
+  content: '';
+  position: absolute;
+  border-radius: inherit;
+  width: 50px;
+  height: 100%;
+  background-color: rgba(255, 0, 0, .2);
+  border-radius: 50px;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: all .25s ease;
+}
+
+.btn-6:hover::after {
+  width: 100%;
+}
