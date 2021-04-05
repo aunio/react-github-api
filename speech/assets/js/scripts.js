@@ -26,6 +26,9 @@ if (window.SpeechRecognition || window.webkitSpeechRecognition) {
             case 'tela vermelha':
                 document.body.style.backgroundColor = '#c4302b';
                 break;
+            case 'abrir meu linkedin':
+                window.location.href = 'https://www.linkedin.com/in/aunio-ribeiro/';
+                break;
         }
 
     }, false);
@@ -35,5 +38,5 @@ if (window.SpeechRecognition || window.webkitSpeechRecognition) {
     }, false);
 
 } else {
-    resultSpeaker.innerHTML = 'Seu navegador não suporta tanta tecnoligia!';
+    resultSpeaker.innerHTML = 'Seu navegador não suporta tanta tecnologia!';
 }
