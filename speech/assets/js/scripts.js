@@ -29,6 +29,9 @@ if (window.SpeechRecognition || window.webkitSpeechRecognition) {
             case 'abrir meu linkedin':
                 window.location.href = 'https://www.linkedin.com/in/aunio-ribeiro/';
                 break;
+            case 'ir para youtube':
+                window.location.href = 'https://www.youtube.com/';
+                break;
         }
 
     }, false);
