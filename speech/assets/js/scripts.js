@@ -7,7 +7,7 @@ if (window.SpeechRecognition || window.webkitSpeechRecognition) {
     var myRecognition = new SpeechRecognition();
     myRecognition.lang = 'pt-BR';
 
-    speakBtn.addEventListener('click', function () {
+    speakBtn.addEventListener('click', () => {
         try {
             myRecognition.start();
             resultSpeaker.innerHTML = "Estou te ouvindo!";
@@ -16,7 +16,7 @@ if (window.SpeechRecognition || window.webkitSpeechRecognition) {
         }
     }, false);
 
-    myRecognition.addEventListener('result', function (evt) {
+    myRecognition.addEventListener('result', (evt) => {
         var resultSpeak = evt.results[0][0].transcript;
         resultSpeaker.innerHTML = resultSpeak;
         switch (resultSpeak.toLowerCase()) {
@@ -36,7 +36,7 @@ if (window.SpeechRecognition || window.webkitSpeechRecognition) {
 
     }, false);
 
-    myRecognition.addEventListener('error', function (evt) {
+    myRecognition.addEventListener('error', (evt) => {
         resultSpeaker.innerHTML = 'Se você disse alguma coisa, não ouvi muito bem!';
     }, false);
 
