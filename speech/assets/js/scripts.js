@@ -10,7 +10,8 @@ if (window.SpeechRecognition || window.webkitSpeechRecognition) {
     speakBtn.addEventListener('click', () => {
         try {
             myRecognition.start();
-            resultSpeaker.innerHTML = "Estou te ouvindo!";
+            speakBtn.innerHTML = "Estou te ouvindo!"
+            speakBtn.classList.add("active");
         } catch (erro) {
             alert('erro:' + erro.message);
         }
@@ -34,12 +35,21 @@ if (window.SpeechRecognition || window.webkitSpeechRecognition) {
                 break;
         }
 
+        speakBtn.classList.remove("active");
+        speakBtn.innerHTML = "Clique para falar!"
+
     }, false);
 
     myRecognition.addEventListener('error', (evt) => {
+
         resultSpeaker.innerHTML = 'Se você disse alguma coisa, não ouvi muito bem!';
+        speakBtn.classList.remove("active");
+        speakBtn.innerHTML = "Clique para falar!"
+
     }, false);
 
 } else {
+
     resultSpeaker.innerHTML = 'Seu navegador não suporta tanta tecnologia!';
+
 }
