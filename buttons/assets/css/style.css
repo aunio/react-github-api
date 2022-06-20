@@ -16,12 +16,34 @@ div {
 button {
   width: 154px;
   height: 50px;
-  margin: 20px;
-  padding: 15px 50px;
+  margin: 10px 0;
   border: none;
   cursor: pointer;
   background-color: transparent;
   font-weight: bold;
+}
+
+.btn-0 {
+  width: 154px;
+  height: 50px;
+  margin: 20px;
+  background-color: #a72e46;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: bold 13.3333px Arial;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn-0 input[type="file"] {
+  display: none;
+}
+
+.btn-0 svg {
+  margin-right: 10px;
 }
 
 .btn-1 {
@@ -207,24 +229,38 @@ button {
 }
 
 .btn-7 {
-  width: 154px;
-  height: 50px;
-  margin: 20px;
-  background-color: #a72e46;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font: bold 13.3333px Arial;
-  color: #fff;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
+  position: relative;
+  background-color: #efefef;
 }
 
-.btn-7 input[type="file"] {
-  display: none;
+.btn-7:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 0, 0, 1);
+  transition: all 0.25s ease;
 }
 
-.btn-7 svg {
-  margin-right: 10px;
+.btn-7:after {
+  content: url(../img/icons/arrow-right.svg);
+  position: absolute;
+  top: 16px;
+  right: 23%;
+  transition: all 0.25s ease;
+}
+
+.btn-7 span {
+  position: relative;
+  padding-right: 10px;
+}
+
+.btn-7:hover:before {
+  width: 100%;
+}
+
+.btn-7:hover:after {
+  right: 20%;
 }
