@@ -1,4 +1,4 @@
-Criações de elementos front-end para passar o tempo :)
+Desafios técnicos
 
 ### `consume-github-api` :trophy:
 
