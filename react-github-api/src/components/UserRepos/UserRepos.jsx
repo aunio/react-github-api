@@ -7,6 +7,7 @@ import './UserRepos.css'
 const UserRepos = (data) => {
 
   const REPOSITORIES_LIST = data.data
+  console.log('Lista de REPOS', REPOSITORIES_LIST)
 
   return (
     <div className='user_repos'>
@@ -20,7 +21,6 @@ const UserRepos = (data) => {
           </div>
         </div>
       ))}
-
     </div>
   )
 
