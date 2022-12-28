@@ -1,0 +1,17 @@
+.user_info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.user_info_img {
+  padding: 0;
+  width: 24px;
+  margin-right: 8px;
+}
+
+.user_info_text {
+  font-size: 20px;
+  font-weight: 300;
+  color: #5c5c5c;
+}

@@ -12,9 +12,10 @@ import './App.css'
 
 function App() {
 
-  const [searchValue, setSearchValue] = useState('')
-  const [isFetching, setIsFetching] = useState(false)
   const [error, setError] = useState(null)
+  const [isFetching, setIsFetching] = useState(false)
+  const [userData, setUserData] = useState({})
+  const [searchValue, setSearchValue] = useState('')
 
   async function getUserData(event) {
     event.preventDefault()
@@ -22,6 +23,7 @@ function App() {
       setIsFetching(true)
       setError(null)
       const response = await client.get(`/${searchValue}`)
+      setUserData(response.data)
     } catch (err) {
       setError(err)
     } finally {
@@ -31,7 +33,6 @@ function App() {
 
   const handleUserName = (event) => {
     const value = event.target.value;
-    console.log(value)
     setSearchValue(value);
   }
 
@@ -75,54 +76,19 @@ function App() {
         </div>
       </div>
       <div className="user_container">
-        <div className='user_info'>
+        <div className='user_bio'>
           <img
             className='user_avatar'
             src={avatarImg}
             alt="avatar"
           />
-          <h2 className='user_name'>Aunio Ribeiro</h2>
-          <h4 className='user_nickname'>aunioribeiro</h4>
+          <h2 className='user_name'>{userData.name}</h2>
+          <h4 className='user_nickname'>{userData.login}</h4>
 
           <UserInfo
-            icon='email'
-            text='aunioribeiro'
+            data={userData}
           />
 
-          <UserInfo
-            icon='bio'
-            text='aunioribeiro'
-          />
-
-          <UserInfo
-            icon='organization'
-            text='aunioribeiro'
-          />
-
-          <UserInfo
-            icon='location'
-            text='aunioribeiro'
-          />
-
-          <UserInfo
-            icon='star'
-            text='aunioribeiro'
-          />
-
-          <UserInfo
-            icon='repositories'
-            text='aunioribeiro'
-          />
-
-          <UserInfo
-            icon='followers'
-            text='aunioribeiro'
-          />
-
-          <UserInfo
-            icon='following'
-            text='aunioribeiro'
-          />
         </div>
         <div className='user_repos'>
           b
