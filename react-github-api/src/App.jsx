@@ -9,29 +9,45 @@ import userNotFound from './assets/img/animations/404-not-found.json'
 import searchIcon from './assets/img/icons/search-icon.svg'
 
 import './App.css'
+import UserRepos from './components/UserRepos/UserRepos';
 
 function App() {
 
   const [error, setError] = useState(null)
-  const [isFetched, setIsFetched] = useState(false)
   const [isFetching, setIsFetching] = useState(false)
   const [searchValue, setSearchValue] = useState('')
-  const [userData, setUserData] = useState(null)
+  const [userInfos, setUserInfos] = useState(null)
+  const [userRepos, setUserRepos] = useState(null)
 
-  async function getUserData(event) {
+  async function getUserInfos(event) {
     event.preventDefault()
     try {
       setIsFetching(true)
       setError(null)
       const response = await client.get(`/${searchValue}`)
-      setUserData(response.data)
+      setUserInfos(response.data)
     } catch (err) {
       setError(err)
     } finally {
       setIsFetching(false)
-      setIsFetched(true)
     }
   }
+
+  async function getUserRepos(event) {
+    event.preventDefault()
+    try {
+      setIsFetching(true)
+      setError(null)
+      const response = await client.get(`/${searchValue}/repos`)
+      setUserRepos(response.data)
+    } catch (err) {
+      setError(err)
+    } finally {
+      setIsFetching(false)
+    }
+  }
+
+  console.log(userRepos)
 
   const handleUserName = (event) => {
     const value = event.target.value;
@@ -52,7 +68,7 @@ function App() {
         </div>
       )}
 
-      <div className={`search_container ${userData || error ? 'search_container-fetched' : ''}`}>
+      <div className={`search_container ${userInfos || error ? 'search_container-fetched' : ''}`}>
         <div className='search'>
           <h1 className='search_title'>
             <span className='search_title_github'>Github</span>
@@ -71,7 +87,10 @@ function App() {
             <button
               className='search_button'
               disabled={searchValue === ''}
-              onClick={getUserData}
+              onClick={(event) => {
+                getUserInfos(event);
+                getUserRepos(event);
+              }}
             >
               <img
                 src={searchIcon}
@@ -82,25 +101,22 @@ function App() {
         </div>
       </div>
 
-      {userData && !isFetching && !error && (
+      {userInfos && !isFetching && !error && (
         <div className="user_container">
           <div className='user_bio'>
             <img
               className='user_avatar'
-              src={userData.avatar_url}
+              src={userInfos.avatar_url}
               alt="avatar"
             />
-            <h2 className='user_name'>{userData.name}</h2>
-            <h4 className='user_nickname'>{userData.login}</h4>
-
+            <h2 className='user_name'>{userInfos.name}</h2>
+            <h4 className='user_nickname'>{userInfos.login}</h4>
             <UserInfo
-              data={userData}
+              data={userInfos}
             />
-
           </div>
-          <div className='user_repos'>
-            b
-          </div>
+          <UserRepos
+            data={userRepos} />
         </div>
       )}
 

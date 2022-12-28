@@ -1,7 +1,6 @@
 import React from 'react'
 
 import bioIcon from '../../assets/img/icons/bio-icon.svg'
-import emailIcon from '../../assets/img/icons/email-icon.svg'
 import followersIcon from '../../assets/img/icons/followers-icon.svg'
 import followingIcon from '../../assets/img/icons/following-icon.svg'
 import locationIcon from '../../assets/img/icons/location-icon.svg'

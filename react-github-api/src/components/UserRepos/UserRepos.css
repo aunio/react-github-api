@@ -1,0 +1,31 @@
+.user_repo {
+  margin-bottom: 20px;
+}
+
+.repo_title {
+  display: block;
+  font-size: 35px;
+  color: #007cff;
+}
+
+.repo_description {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #5c5c5c;
+}
+
+.repo_stars {
+  display: flex;
+  align-items: center;
+}
+
+.repo_stars_icon {
+  margin-right: 10px;
+}
+
+.repo_stars_quantity {
+  font-size: 20px;
+  font-weight: 300;
+  color: #5c5c5c
+}
