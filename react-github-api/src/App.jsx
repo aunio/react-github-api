@@ -52,7 +52,7 @@ function App() {
         </div>
       )}
 
-      <div className="search_container">
+      <div className={`search_container ${userData || error ? 'search_container-fetched' : ''}`}>
         <div className='search'>
           <h1 className='search_title'>
             <span className='search_title_github'>Github</span>

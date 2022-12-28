@@ -15,7 +15,6 @@ const UserInfo = ({ data }) => {
   const {
     bio,
     company,
-    email,
     followers,
     following,
     location,
@@ -24,15 +23,6 @@ const UserInfo = ({ data }) => {
 
   return (
     <>
-      <div className='user_info'>
-        <img
-          className='user_info_img'
-          src={emailIcon}
-          alt="Email Icon"
-        />
-        <p className='user_info_text'>{email || 'N/A'}</p>
-      </div>
-
       <div className='user_info'>
         <img
           className='user_info_img'

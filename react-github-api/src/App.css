@@ -5,15 +5,33 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #212529;
-  opacity: 80%;
+  background: rgba(33, 37, 41, .9);
+  overflow: hidden;
 }
 
 .search_container {
+  padding-top: 35vh;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: 'Blinker', sans-serif;
+}
+
+.search_container-fetched {
+  padding-top: 50px;
+}
+
+.search_container-fetched .search {
+  display: flex;
+}
+
+.search_container-fetched .search_title {
+  font-size: 40px;
+  margin-right: 40px;
+}
+
+.search {
+  text-align: center;
 }
 
 .search_title {
@@ -23,16 +41,12 @@
 
 .search_title_github {
   font-weight: 500;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .search_title_search {
   font-weight: 200;
   font-style: italic;
-}
-
-.search {
-  text-align: center;
 }
 
 .search_form {
@@ -60,7 +74,7 @@
 .search_button {
   width: 100px;
   height: 50px;
-  background-color: #4a88c7;
+  background-color: #007cff;
   border: none;
   cursor: pointer;
 }
