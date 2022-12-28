@@ -99,3 +99,11 @@
   font-weight: 300;
   margin-bottom: 34px;
 }
+
+.user_container-not_found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: calc(100vh - 122px);
+}

@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
+import { Player } from '@lottiefiles/react-lottie-player';
 
 import client from './services/client'
 
 import UserInfo from './components/UserInfo/UserInfo'
-
-import avatarImg from './assets/img/avatar.jpg'
-import loadingAnimation from './assets/img/animations/loading.gif'
+import loadingAnimation from './assets/img/animations/loading.json'
+import userNotFound from './assets/img/animations/404-not-found.json'
 import searchIcon from './assets/img/icons/search-icon.svg'
 
 import './App.css'
@@ -13,9 +13,10 @@ import './App.css'
 function App() {
 
   const [error, setError] = useState(null)
+  const [isFetched, setIsFetched] = useState(false)
   const [isFetching, setIsFetching] = useState(false)
-  const [userData, setUserData] = useState({})
   const [searchValue, setSearchValue] = useState('')
+  const [userData, setUserData] = useState({})
 
   async function getUserData(event) {
     event.preventDefault()
@@ -28,6 +29,7 @@ function App() {
       setError(err)
     } finally {
       setIsFetching(false)
+      setIsFetched(true)
     }
   }
 
@@ -40,9 +42,12 @@ function App() {
     <>
       {isFetching && (
         <div className="loading">
-          <img
+          <Player
             src={loadingAnimation}
-            alt="loading"
+            speed="1"
+            loop
+            controls
+            autoplay
           />
         </div>
       )}
@@ -75,25 +80,40 @@ function App() {
           </form>
         </div>
       </div>
-      <div className="user_container">
-        <div className='user_bio'>
-          <img
-            className='user_avatar'
-            src={avatarImg}
-            alt="avatar"
-          />
-          <h2 className='user_name'>{userData.name}</h2>
-          <h4 className='user_nickname'>{userData.login}</h4>
 
-          <UserInfo
-            data={userData}
-          />
+      {isFetched && !error && (
+        <div className="user_container">
+          <div className='user_bio'>
+            <img
+              className='user_avatar'
+              src={userData.avatar_url}
+              alt="avatar"
+            />
+            <h2 className='user_name'>{userData.name}</h2>
+            <h4 className='user_nickname'>{userData.login}</h4>
 
+            <UserInfo
+              data={userData}
+            />
+
+          </div>
+          <div className='user_repos'>
+            b
+          </div>
         </div>
-        <div className='user_repos'>
-          b
+      )}
+
+      {error && (
+        <div className='user_container-not_found'>
+          <Player
+            src={userNotFound}
+            speed="1"
+            loop
+            controls
+            autoplay
+          />
         </div>
-      </div>
+      )}
     </>
   )
 }
