@@ -1,0 +1,54 @@
+.search_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search_title {
+  font-size: 60px;
+  color: #212529;
+}
+
+.search_title_github {
+  font-weight: 500;
+  margin-right: 20px;
+}
+
+.search_title_search {
+  font-weight: 200;
+  font-style: italic;
+}
+
+.search {
+  text-align: center;
+}
+
+.search_form {
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 3px 0 rgb(0 0 0 / 30%);
+}
+
+.search_input {
+  width: 650px;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+}
+
+.search_input:focus {
+  outline: none;
+}
+
+.search_button {
+  width: 100px;
+  height: 50px;
+  background-color: #ac53f2;
+  border: none;
+}
+
+* {
+  font-family: 'Blinker', sans-serif;
+}
