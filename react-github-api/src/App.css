@@ -60,13 +60,13 @@
 .search_button {
   width: 100px;
   height: 50px;
-  background-color: #ac53f2;
+  background-color: #4a88c7;
   border: none;
   cursor: pointer;
 }
 
 .search_button:hover {
-  background-color: #9e36ee;
+  background-color: #2b7ac9;
 }
 
 .search_button:disabled {

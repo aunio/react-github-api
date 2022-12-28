@@ -16,7 +16,7 @@ function App() {
   const [isFetched, setIsFetched] = useState(false)
   const [isFetching, setIsFetching] = useState(false)
   const [searchValue, setSearchValue] = useState('')
-  const [userData, setUserData] = useState({})
+  const [userData, setUserData] = useState(null)
 
   async function getUserData(event) {
     event.preventDefault()
@@ -51,6 +51,7 @@ function App() {
           />
         </div>
       )}
+
       <div className="search_container">
         <div className='search'>
           <h1 className='search_title'>
@@ -81,7 +82,7 @@ function App() {
         </div>
       </div>
 
-      {isFetched && !error && (
+      {userData && !isFetching && !error && (
         <div className="user_container">
           <div className='user_bio'>
             <img
@@ -103,7 +104,7 @@ function App() {
         </div>
       )}
 
-      {error && (
+      {!isFetching && error && (
         <div className='user_container-not_found'>
           <Player
             src={userNotFound}
