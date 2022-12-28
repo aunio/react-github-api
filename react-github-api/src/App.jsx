@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 
 import client from './services/client'
 
+import UserInfo from './components/UserInfo/UserInfo'
+
+import avatarImg from './assets/img/avatar.jpg'
 import loadingAnimation from './assets/img/animations/loading.gif'
 import searchIcon from './assets/img/icons/search-icon.svg'
 
@@ -71,7 +74,59 @@ function App() {
           </form>
         </div>
       </div>
-      <div className="result_container">
+      <div className="user_container">
+        <div className='user_info'>
+          <img
+            className='user_avatar'
+            src={avatarImg}
+            alt="avatar"
+          />
+          <h2 className='user_name'>Aunio Ribeiro</h2>
+          <h4 className='user_nickname'>aunioribeiro</h4>
+
+          <UserInfo
+            icon='email'
+            text='aunioribeiro'
+          />
+
+          <UserInfo
+            icon='bio'
+            text='aunioribeiro'
+          />
+
+          <UserInfo
+            icon='organization'
+            text='aunioribeiro'
+          />
+
+          <UserInfo
+            icon='location'
+            text='aunioribeiro'
+          />
+
+          <UserInfo
+            icon='star'
+            text='aunioribeiro'
+          />
+
+          <UserInfo
+            icon='repositories'
+            text='aunioribeiro'
+          />
+
+          <UserInfo
+            icon='followers'
+            text='aunioribeiro'
+          />
+
+          <UserInfo
+            icon='following'
+            text='aunioribeiro'
+          />
+        </div>
+        <div className='user_repos'>
+          b
+        </div>
       </div>
     </>
   )
