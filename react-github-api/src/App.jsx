@@ -26,7 +26,6 @@ function App() {
       setError(null)
       const response = await client.get(`/${searchValue}`)
       setUserInformations(response.data)
-      console.log('CONSOLE USER', response)
     } catch (err) {
       setError(err)
     } finally {
@@ -41,7 +40,6 @@ function App() {
       setError(null)
       const response = await client.get(`/${searchValue}/repos`)
       setUserRepositories(response.data)
-      console.log('CONSOLE REPOS', response)
     } catch (err) {
       setError(err)
     } finally {
@@ -53,9 +51,6 @@ function App() {
     const value = event.target.value;
     setSearchValue(value);
   }
-
-  console.log('info', userInformations)
-  console.log('repo', userRepositories)
 
   return (
     <>
